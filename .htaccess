@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Serve file e directory esistenti direttamente
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Fallback all'entrypoint principale
+RewriteRule ^ index.php [L]

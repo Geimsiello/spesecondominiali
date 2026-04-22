@@ -1,0 +1,7 @@
+body.bg-gradient-primary .card .small.text-danger {
+  min-height: 1.25rem;
+}
+
+.page-card pre {
+  margin-bottom: 0;
+}

@@ -18,7 +18,17 @@ Portale SB Admin 2 pubblicabile su hosting PHP senza Node.js.
 
 ## Configurazione database
 
-Modifica il file `config.php` e inserisci la password
+Modifica il file `config.php` e inserisci la password:
+
+## Configurazione database
+
+Modifica il file `config.php` e inserisci la password:
+
+- `name`: `spesecondominiali`
+- `host`: `ar18382-001.eu.clouddb.ovh.net`
+- `port`: `35918`
+- `user`: `spesemio`
+- `password`: da compilare
 
 ## Pubblicazione
 
@@ -41,7 +51,6 @@ Se il DB non contiene utenti, compare la schermata di setup admin con:
 Completato il setup, puoi effettuare login dalla pagina dedicata `login.php`.
 
 Nel form di login sono attivi gli attributi autocomplete consigliati per i password manager (`username` e `current-password`) e l'opzione `Ricordami`, che mantiene la sessione utente fino a 30 giorni.
-
 ## Pagine portale (SB Admin 2)
 
 - `dashboard.php`
@@ -85,7 +94,6 @@ Le risposte errore sono standardizzate con struttura:
 `{"error":{"code":"ERROR_CODE","message":"Messaggio leggibile","meta":{...opzionale}}}`
 
 Puoi ottenere il catalogo completo da `api.php?action=error_codes`.
-
 ## Note upload PDF
 
 In modalità PHP pura senza dipendenze native di parsing PDF, l'upload crea una voce da revisionare.
