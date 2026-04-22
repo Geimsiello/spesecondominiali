@@ -54,7 +54,8 @@ document.getElementById("aiSettingsForm").addEventListener("submit", async (e) =
     body: JSON.stringify({
       ollamaUrl: form.get("ollamaUrl"),
       ollamaModel: form.get("ollamaModel"),
-      ollamaApiKey: form.get("ollamaApiKey")
+      ollamaApiKey: form.get("ollamaApiKey"),
+      aiContextMode: form.get("aiContextMode")
     })
   });
   document.getElementById("aiSettingsResult").textContent = payload.message;
@@ -92,6 +93,7 @@ async function bootstrapAiSettings() {
   const payload = await api("ai_settings_get");
   document.getElementById("ollamaUrlInput").value = payload.ollamaUrl || "";
   document.getElementById("ollamaApiKeyInput").value = payload.ollamaApiKey || "";
+  document.getElementById("aiContextModeInput").value = payload.aiContextMode || "compact";
   try {
     await loadModels(payload.ollamaModel || "");
   } catch {

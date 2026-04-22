@@ -38,6 +38,13 @@ ensure_logged_in();
                 <label class="small text-muted">API Key (opzionale)</label>
                 <input id="ollamaApiKeyInput" name="ollamaApiKey" class="form-control" placeholder="Inserisci API key" />
               </div>
+              <div class="col-md-4 mb-2">
+                <label class="small text-muted">Modalita contesto AI</label>
+                <select id="aiContextModeInput" name="aiContextMode" class="form-control">
+                  <option value="compact">Compatta (head + tail)</option>
+                  <option value="full">Completa (max consentito)</option>
+                </select>
+              </div>
               <div class="col-md-3 mb-2">
                 <button class="btn btn-primary btn-block">Salva impostazioni</button>
               </div>

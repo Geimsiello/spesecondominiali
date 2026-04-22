@@ -28,15 +28,15 @@ if (!empty($_SESSION['user_id'])) {
 
           <div id="setupCard" style="display:none">
             <h2 class="h5 text-gray-900">Setup iniziale amministratore</h2>
-            <form id="setupForm" class="user mt-3">
+            <form id="setupForm" class="user mt-3" method="post" autocomplete="on">
               <div class="form-group">
-                <input class="form-control form-control-user" name="fullName" placeholder="Nome completo admin" required />
+                <input class="form-control form-control-user" name="fullName" autocomplete="name" placeholder="Nome completo admin" required />
               </div>
               <div class="form-group">
-                <input class="form-control form-control-user" type="email" name="email" placeholder="Email admin" required />
+                <input class="form-control form-control-user" type="email" name="email" autocomplete="email" placeholder="Email admin" required />
               </div>
               <div class="form-group">
-                <input class="form-control form-control-user" type="password" name="password" minlength="8" placeholder="Password min 8 caratteri" required />
+                <input class="form-control form-control-user" type="password" name="password" autocomplete="new-password" minlength="8" placeholder="Password min 8 caratteri" required />
               </div>
               <button class="btn btn-primary btn-user btn-block">Crea admin</button>
             </form>
@@ -45,12 +45,18 @@ if (!empty($_SESSION['user_id'])) {
           </div>
 
           <div id="loginCard">
-            <form id="loginForm" class="user">
+            <form id="loginForm" class="user" method="post" autocomplete="on">
               <div class="form-group">
-                <input class="form-control form-control-user" name="email" placeholder="Email" required />
+                <input class="form-control form-control-user" type="email" name="email" autocomplete="username" placeholder="Email" required />
               </div>
               <div class="form-group">
-                <input class="form-control form-control-user" type="password" name="password" placeholder="Password" required />
+                <input class="form-control form-control-user" type="password" name="password" autocomplete="current-password" placeholder="Password" required />
+              </div>
+              <div class="form-group">
+                <div class="custom-control custom-checkbox small">
+                  <input class="custom-control-input" id="rememberMe" type="checkbox" name="remember" value="1" />
+                  <label class="custom-control-label" for="rememberMe">Ricordami</label>
+                </div>
               </div>
               <button class="btn btn-primary btn-user btn-block">Accedi</button>
             </form>

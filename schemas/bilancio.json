@@ -1,0 +1,29 @@
+{
+  "name": "bilancio",
+  "description": "Estrattore per prospetti bilancio con colonne preventivo, consuntivo e differenza",
+  "sourceColumns": ["voce", "preventivo", "consuntivo", "differenza"],
+  "mapping": {
+    "category": "voce",
+    "amount": "consuntivo; se assente usa preventivo",
+    "description": "testo riga completo facoltativo"
+  },
+  "outputSchema": {
+    "items": [
+      {
+        "category": "string",
+        "supplier": null,
+        "description": "string|null",
+        "amount": 0.0,
+        "invoiceNumber": null,
+        "expenseDate": null,
+        "confidence": 0.0
+      }
+    ]
+  },
+  "rules": [
+    "Ignora intestazioni e righe totali aggregate",
+    "Usa amount positivo in euro",
+    "Interpreta formato importi italiano con virgola",
+    "Mantieni una riga output per ogni voce economica"
+  ]
+}

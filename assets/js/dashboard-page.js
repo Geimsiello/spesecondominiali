@@ -10,7 +10,10 @@ document.getElementById("refreshAnalyticsBtn").addEventListener("click", async (
   const response = await fetch(`api.php?action=analytics_summary&${query.toString()}`);
   const payload = await response.json();
   if (!response.ok) {
-    document.getElementById("analyticsOutput").textContent = payload.error || "Errore API";
+    const message = (typeof normalizeApiError === "function")
+      ? normalizeApiError(payload, "Errore API")
+      : (payload.error || "Errore API");
+    document.getElementById("analyticsOutput").textContent = message;
     return;
   }
   document.getElementById("analyticsOutput").textContent = JSON.stringify(payload, null, 2);

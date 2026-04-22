@@ -5,3 +5,57 @@ body.bg-gradient-primary .card .small.text-danger {
 .page-card pre {
   margin-bottom: 0;
 }
+
+.confidence-info-icon {
+  margin-left: 0.35rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid #858796;
+  background: #fff;
+  color: #5a5c69;
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.pdf-dropzone {
+  border: 2px dashed #d1d3e2;
+  border-radius: 0.35rem;
+  background: #f8f9fc;
+  color: #4e73df;
+  text-align: center;
+  padding: 0.9rem;
+  transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.pdf-dropzone--active {
+  border-color: #1cc88a;
+  background: #ecfff6;
+}
+
+.global-processing-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+}
+
+.global-processing-loader__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.global-processing-loader__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 320px;
+  max-width: 90vw;
+}

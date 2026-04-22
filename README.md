@@ -18,17 +18,7 @@ Portale SB Admin 2 pubblicabile su hosting PHP senza Node.js.
 
 ## Configurazione database
 
-Modifica il file `config.php` e inserisci la password:
-
-## Configurazione database
-
-Modifica il file `config.php` e inserisci la password:
-
-- `name`: `spesecondominiali`
-- `host`: `ar18382-001.eu.clouddb.ovh.net`
-- `port`: `35918`
-- `user`: `spesemio`
-- `password`: da compilare
+Modifica il file `config.php` e inserisci la password
 
 ## Pubblicazione
 

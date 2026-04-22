@@ -8,6 +8,7 @@ function render_sidebar(string $activePage): void
     $items = [
         'dashboard' => ['label' => 'Dashboard', 'href' => 'dashboard.php'],
         'upload' => ['label' => 'Upload PDF', 'href' => 'upload.php'],
+        'documents' => ['label' => 'Archivio documenti', 'href' => 'documents.php'],
         'review' => ['label' => 'Revisione', 'href' => 'review.php'],
         'ai-settings' => ['label' => 'Settings AI', 'href' => 'ai-settings.php']
     ];

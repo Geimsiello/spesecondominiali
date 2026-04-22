@@ -9,6 +9,7 @@
 3. [DONE] Come utente voglio correggere estrazioni con bassa confidenza. (Issue `#4`)
 4. [DONE] Come utente voglio accedere tramite login page separata con accesso protetto al portale. (Issue `#2`)
 5. [DONE] Come admin voglio configurare endpoint/modello/API key AI e testare la connessione. (implementato, da aprire issue dedicata se vuoi tracciamento formale)
+6. [DONE] Come utente voglio eliminare un documento dall'archivio con conferma esplicita.
 
 ### Task tecnici
 
@@ -19,7 +20,14 @@
 - [DONE] Dashboard con filtri anno/scope e riepiloghi.
 - [DONE] Schermata review con update voce.
 - [DONE] Settings AI con test connessione e lista modelli dinamica.
+- [DONE] Archivio documenti con azione elimina (catalogo + file fisico).
 - [TODO] Hardening sicurezza auth (CSRF/rate-limit/login policy).
+
+### Prossime user stories (priorita)
+
+1. [NEXT] Completare US2 con estrazione PDF strutturata reale end-to-end.
+2. [NEXT] Hardening sicurezza auth (CSRF, rate-limit login, policy password).
+3. [NEXT] Migliorare review con editing completo campi (fornitore, data, numero fattura, categoria guidata).
 
 ### Stato Epic
 

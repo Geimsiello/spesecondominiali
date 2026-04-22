@@ -24,13 +24,16 @@ document.getElementById("setupForm").addEventListener("submit", async (e) => {
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   const form = new FormData(e.target);
+  // Se selezionato, richiede al backend una durata estesa del cookie di sessione.
+  const remember = form.get("remember") === "1";
   try {
     await api("login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         email: form.get("email"),
-        password: form.get("password")
+        password: form.get("password"),
+        remember
       })
     });
     window.location.href = "dashboard.php";

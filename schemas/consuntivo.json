@@ -1,0 +1,31 @@
+{
+  "name": "consuntivo",
+  "description": "Estrattore per bilancio consuntivo comparativo condominiale",
+  "sourceColumns": ["categoria", "descrizione", "preventivo", "consuntivo"],
+  "mapping": {
+    "category": "macro sezione (es. SPESE DI PROPRIETA')",
+    "description": "voce riga (es. ASSICURAZIONE)",
+    "budgetAmount": "colonna Preventivo",
+    "actualAmount": "colonna Consuntivo"
+  },
+  "outputSchema": {
+    "items": [
+      {
+        "category": "string",
+        "description": "string",
+        "budgetAmount": 0.0,
+        "actualAmount": 0.0,
+        "expenseDate": "YYYY-01-01",
+        "confidence": 0.0
+      }
+    ]
+  },
+  "rules": [
+    "Usa SOLO le sezioni e le voci economiche del prospetto comparativo",
+    "Escludi righe di totale sezione e intestazioni",
+    "Interpreta importi italiani con separatore migliaia punto e decimali virgola",
+    "Non includere supplier e invoice per questo tipo documento",
+    "Imposta expenseDate usando l'anno documento in formato YYYY-01-01 quando non disponibile una data puntuale",
+    "Fermati prima di eventuali pagine di ripartizione per unita"
+  ]
+}

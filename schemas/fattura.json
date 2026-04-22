@@ -1,0 +1,31 @@
+{
+  "name": "fattura",
+  "description": "Estrattore per fatture fornitore con numero, data e importi",
+  "sourceColumns": ["fornitore", "numero_fattura", "data", "imponibile", "iva", "totale"],
+  "mapping": {
+    "category": "tipo costo o descrizione principale",
+    "supplier": "fornitore",
+    "invoiceNumber": "numero_fattura",
+    "expenseDate": "data",
+    "amount": "totale"
+  },
+  "outputSchema": {
+    "items": [
+      {
+        "category": "string",
+        "supplier": "string|null",
+        "description": "string|null",
+        "amount": 0.0,
+        "invoiceNumber": "string|null",
+        "expenseDate": "YYYY-MM-DD|null",
+        "confidence": 0.0
+      }
+    ]
+  },
+  "rules": [
+    "Se presenti piu righe di dettaglio crea item separati solo se hanno importi autonomi",
+    "Quando disponibile preferisci il totale documento",
+    "Normalizza la data nel formato YYYY-MM-DD",
+    "confidence alta se numero fattura, data e totale sono tutti presenti"
+  ]
+}

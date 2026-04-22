@@ -1,0 +1,23 @@
+{
+  "name": "default",
+  "description": "Schema base per estrazione voci di spesa da documenti PDF",
+  "outputSchema": {
+    "items": [
+      {
+        "category": "string",
+        "supplier": "string|null",
+        "description": "string|null",
+        "amount": 0.0,
+        "invoiceNumber": "string|null",
+        "expenseDate": "YYYY-MM-DD|null",
+        "confidence": 0.0
+      }
+    ]
+  },
+  "rules": [
+    "Usa amount > 0",
+    "confidence tra 0 e 1",
+    "Se non trovi il fornitore usa null",
+    "Se non trovi data usa null"
+  ]
+}
